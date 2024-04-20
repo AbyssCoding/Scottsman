@@ -19,9 +19,9 @@ public class playerMove : MonoBehaviour
     {
       
         transform.position = playerPos;
-        if (!isJumping)
-        {
-            if (Input.GetKey(KeyCode.D))
+        
+        
+           if (Input.GetKey(KeyCode.D))
             {
                 playerPos.x = playerPos.x + moveSpeed * Time.deltaTime;
             }
@@ -29,11 +29,7 @@ public class playerMove : MonoBehaviour
             {
                 playerPos.x = playerPos.x - moveSpeed * Time.deltaTime;
             }
-        }
-        if(!isJumping && Input.GetKeyDown(KeyCode.Space))
-        {
-            isJumping = true;
-            playerPos.x = playerPos.x + moveSpeed * Time.deltaTime;
-        }
+        
+        
     }
 }
